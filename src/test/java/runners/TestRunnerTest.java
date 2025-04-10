@@ -3,7 +3,7 @@ package runners;  // Ensure this matches your package structure
 import org.junit.runner.RunWith;
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
-
+import io.cucumber.testng.AbstractTestNGCucumberTests;
 @RunWith(Cucumber.class)
 @CucumberOptions(
 
@@ -13,7 +13,7 @@ import io.cucumber.junit.CucumberOptions;
    plugin = {"pretty", "html:target/cucumber-reports.html", "json:target/cucumber-reports.json"}, // Generates reports
     monochrome = true // Makes the console output readable
 )
-public class TestRunnerTest {
+public class TestRunnerTest extends AbstractTestNGCucumberTests{
 }
 
 
