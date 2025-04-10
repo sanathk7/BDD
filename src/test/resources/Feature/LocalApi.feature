@@ -23,7 +23,7 @@ Feature: Create User API
     Scenario: Delete a user successfully
     Given the API endpoint is "users/"
     When I send a "DELETE" request
-    Then the response status should be 200
+    Then the response status should be 204
     
    
    
