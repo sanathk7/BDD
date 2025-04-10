@@ -65,7 +65,7 @@ public static Response sendRequest(String request,String endpoint,String BaseUrl
     	System.out.println("put"+endpoint+UserId.id); 
     	try {
             update_data= new String(Files.readAllBytes(Paths.get(
-               "src\\test\\java\\userdata\\updatedata.json" )));
+               "src/test/java/userdata/updatedata.json" )));
        } catch (IOException e) {
        	 throw new RuntimeException("Failed to read JSON file", e);
        }
