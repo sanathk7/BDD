@@ -13,7 +13,7 @@ public class Hooks {
     @BeforeAll
     public static void setupReport() {
     	if(extent==null) {
-    	 ExtentSparkReporter sparkReporter = new ExtentSparkReporter("C:\\Users\\sakum\\eclipse-workspace\\BDD_Restassured\\target\\ExtentReport.html");
+    	 ExtentSparkReporter sparkReporter = new ExtentSparkReporter("target/ExtentReport.html");
     	   
     	    extent = new ExtentReports();
     	    extent.attachReporter(sparkReporter);
