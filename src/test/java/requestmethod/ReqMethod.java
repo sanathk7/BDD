@@ -54,14 +54,15 @@ public static Response sendRequest(String request,String endpoint,String BaseUrl
     		 //System.out.println(BaseUrl+endpoint);
     		break;
     case "GET":
-    	//System.out.println(endpoint + UserId.id); 
-    	response = given().when().get(endpoint + UserId.id);
+    	System.out.println("Get"+endpoint+UserId.id); 
+    	response = given().when().get(endpoint+UserId.id);
         break;
     case "PUT":
 		/*
 		 * HashMap<String, Object> map1 = new HashMap<>(); map1.put("id", "4");
 		 * map1.put("name", "santh"); map1.put("city", "kakve");
 		 */
+    	System.out.println("put"+endpoint+UserId.id); 
     	try {
             update_data= new String(Files.readAllBytes(Paths.get(
                "C:\\Users\\sakum\\eclipse-workspace\\BDD_Restassured\\src\\test\\java\\userdata\\updatedata.json" )));
