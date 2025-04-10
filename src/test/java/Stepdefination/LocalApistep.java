@@ -14,7 +14,7 @@ import static io.restassured.RestAssured.*;
 import utils.Hooks;
 
 public class LocalApistep {
-	public static String BaseUrl = "http://localhost:3000";
+	public static String BaseUrl ="https://reqres.in/api/";
 
 	public String endpoint;
 	public Request request;
