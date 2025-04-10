@@ -41,7 +41,7 @@ public static Response sendRequest(String request,String endpoint,String BaseUrl
             throw new RuntimeException("Failed to read JSON file", e);
         }	*/
         try {
-             create_data= new String(Files.readAllBytes(Paths.get("src\\test\\java\\userdata\\inputdata.json" )));
+             create_data= new String(Files.readAllBytes(Paths.get("src/test/java/userdata/inputdata.json" )));
         } catch (IOException e) {
         	 throw new RuntimeException("Failed to read JSON file", e);
         }
