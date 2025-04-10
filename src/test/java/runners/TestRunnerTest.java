@@ -1,21 +1,16 @@
-package runners;  // Ensure this matches your package structure
+package runners;
 
-import org.junit.runner.RunWith;
-import io.cucumber.junit.Cucumber;
-import io.cucumber.junit.CucumberOptions;
 import io.cucumber.testng.AbstractTestNGCucumberTests;
-@RunWith(Cucumber.class)
+import io.cucumber.testng.CucumberOptions;
+
 @CucumberOptions(
-
-    features = "classpath:Features", // Adjust this if your feature files are in a different folder
-
-    glue = {"Stepdefination", "utils"}, // This should match the package of your step definitions
-   plugin = {"pretty", "html:target/cucumber-reports.html", "json:target/cucumber-reports.json"}, // Generates reports
-    monochrome = true // Makes the console output readable
+    features = "src/test/resources/Feature", // Corrected path
+    glue = {"Stepdefination", "utils"},
+    plugin = {"pretty", "html:target/cucumber-reports.html", "json:target/cucumber-reports.json"},
+    monochrome = true
 )
-public class TestRunnerTest extends AbstractTestNGCucumberTests{
+public class TestRunnerTest extends AbstractTestNGCucumberTests {
 }
-
 
 
 
