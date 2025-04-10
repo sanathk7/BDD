@@ -107,6 +107,14 @@
   <version>2.0.9</version>
   <scope>test</scope>
 </dependency>
+           <!-- Cucumber TestNG integration -->
+<dependency>
+    <groupId>io.cucumber</groupId>
+    <artifactId>cucumber-testng</artifactId>
+    <version>7.11.1</version> <!-- Make sure to use a version compatible with your other cucumber libs -->
+    <scope>test</scope>
+</dependency>
+
 
   </dependencies>
 
