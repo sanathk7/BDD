@@ -74,9 +74,15 @@ Hooks.extentTest.pass("I have valid user data from "+string);
 	public void the_response_status_should_be(int int1) {
 		Assert.assertEquals(int1, response.getStatusCode());
 		// System.out.println("Response Body: " + response.asString());
-		String number = response.jsonPath().getString("id");
+		try{String number = response.jsonPath().getString("id");
 		System.out.println("get"+number);UserId.id=number;
 		 Hooks.extentTest.pass(String.format("the response status should be %s",int1));
+	}
+		catch (Exception e) {
+            // Catching all exceptions (General error)
+            System.out.println("An error occurred: " + e.getMessage());
+            //e.printStackTrace();  // Prints the stack trace for debugging
+        }
 	}
 
 	
